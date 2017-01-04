@@ -1,0 +1,14 @@
+{
+  "name": "data-forward-receiver-lambda-node",
+  "version": "1.0.0",
+  "description": "Sample code for receiving Data Forwards via AWS Lambda and AWS RDS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Hoffmann",
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.12.0"
+  }
+}
