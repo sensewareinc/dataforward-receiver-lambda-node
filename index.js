@@ -17,7 +17,6 @@ exports.myHandler = function(event, context, callback) {
     var values = [];
     var packet = JSON.parse(event.body);
     
-    console.log(packet, typeof packet);
     // Construct the query
     packet.data.forEach(function(record){
         query += queryTemplate;
