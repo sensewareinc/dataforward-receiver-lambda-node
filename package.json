@@ -9,6 +9,7 @@
   "author": "Thomas Hoffmann",
   "license": "MIT",
   "dependencies": {
+    "mssql": "^3.3.0",
     "mysql": "^2.12.0"
   }
 }

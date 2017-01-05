@@ -15,8 +15,17 @@ exports.myHandler = function(event, context, callback) {
     
     var query = '';
     var values = [];
-    var packet = JSON.parse(event.body);
-    
+
+    // When testing lambda the packet is the request body is the event
+    // but when testing through the Api Gateway it is wrapped in an additional
+    // request dictionary
+    var packet;
+    if(event.hasOwnProperty('body')){
+        packet = JSON.parse(event.body);
+    } else {
+        packet = event;
+    }
+
     // Construct the query
     packet.data.forEach(function(record){
         query += queryTemplate;
