@@ -16,9 +16,8 @@ exports.myHandler = function(event, context, callback) {
     var query = '';
     var values = [];
 
-    // When testing lambda the packet is the request body is the event
-    // but when testing through the Api Gateway it is wrapped in an additional
-    // request dictionary
+    // When testing this through the lambda UI the packet is the event but when testing through the Api Gateway
+    // the packet is wrapped in an additional object containing request metadata
     var packet;
     if(event.hasOwnProperty('body')){
         packet = JSON.parse(event.body);
